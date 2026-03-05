@@ -26,96 +26,111 @@
                     "id": "wgfd-elk-crucial-pmtiles",
                     "display_name": "Elk Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#E65100", "fill-opacity": 0.4 }
+                    "default_style": { "fill-color": "#E65100", "fill-opacity": 0.4 },
+                    "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
                     "id": "wgfd-elk-seasonal-pmtiles",
                     "display_name": "Elk Seasonal Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#FF8F00", "fill-opacity": 0.35 }
+                    "default_style": { "fill-color": "#FF8F00", "fill-opacity": 0.35 },
+                    "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
                     "id": "wgfd-mule-deer-crucial-pmtiles",
                     "display_name": "Mule Deer Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#2E7D32", "fill-opacity": 0.4 }
+                    "default_style": { "fill-color": "#2E7D32", "fill-opacity": 0.4 },
+                    "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
                     "id": "wgfd-mule-deer-seasonal-pmtiles",
                     "display_name": "Mule Deer Seasonal Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#66BB6A", "fill-opacity": 0.35 }
+                    "default_style": { "fill-color": "#66BB6A", "fill-opacity": 0.35 },
+                    "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
                     "id": "wgfd-pronghorn-crucial-pmtiles",
                     "display_name": "Pronghorn Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#1565C0", "fill-opacity": 0.4 }
+                    "default_style": { "fill-color": "#1565C0", "fill-opacity": 0.4 },
+                    "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
                     "id": "wgfd-pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Seasonal Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#42A5F5", "fill-opacity": 0.35 }
+                    "default_style": { "fill-color": "#42A5F5", "fill-opacity": 0.35 },
+                    "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
                     "id": "sage-grouse-priority-pmtiles",
                     "display_name": "Sage-Grouse Priority Habitat",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#6A1B9A", "fill-opacity": 0.4 }
+                    "default_style": { "fill-color": "#6A1B9A", "fill-opacity": 0.4 },
+                    "tooltip_fields": ["NAME", "Acres"]
                 },
                 {
                     "id": "blm-sma-pmtiles",
                     "display_name": "BLM Surface Management Areas",
                     "group": "Land Management",
-                    "default_style": { "fill-color": "#795548", "fill-opacity": 0.3 }
+                    "default_style": { "fill-color": "#795548", "fill-opacity": 0.3 },
+                    "tooltip_fields": ["ADMIN_UNIT_NAME", "ADMIN_UNIT_TYPE", "ADMIN_DEPT_CODE"]
                 },
                 {
                     "id": "wy-counties-pmtiles",
                     "display_name": "Wyoming Counties",
                     "group": "Administrative",
-                    "default_style": { "fill-color": "rgba(0,0,0,0)", "fill-opacity": 0 }
+                    "default_style": { "fill-color": "rgba(0,0,0,0)", "fill-opacity": 0 },
+                    "tooltip_fields": ["COUNTYNAME"]
                 },
                 {
                     "id": "wyoming-places-pmtiles",
                     "display_name": "Wyoming Incorporated Places",
                     "group": "Administrative",
-                    "default_style": { "fill-color": "#9C27B0", "fill-opacity": 0.4 }
+                    "default_style": { "fill-color": "#9C27B0", "fill-opacity": 0.4 },
+                    "tooltip_fields": ["Name", "County", "Population_2010", "County_Seat"]
                 },
                 {
                     "id": "nlcd-2024-cog",
                     "display_name": "NLCD 2024 Land Cover",
                     "group": "Land Cover",
                     "colormap": "rdylgn",
-                    "rescale": "11,95"
+                    "rescale": "11,95",
+                    "legend_label": "NLCD class"
                 },
                 {
                     "id": "sagebrush-cog",
                     "display_name": "Sagebrush Conservation Design",
                     "group": "Land Cover",
                     "colormap": "rdylgn",
-                    "rescale": "1,3"
+                    "rescale": "1,3",
+                    "legend_label": "class (1=Core, 3=Other)"
                 },
                 {
                     "id": "rap-arte-cog",
                     "display_name": "Sagebrush Cover 2024 (RAP)",
                     "group": "Land Cover",
                     "colormap": "greens",
-                    "rescale": "0,60"
+                    "rescale": "0,60",
+                    "legend_label": "% cover"
                 },
                 {
                     "id": "rap-iag-cog",
                     "display_name": "Invasive Annual Grass 2024 (RAP)",
                     "group": "Land Cover",
                     "colormap": "reds",
-                    "rescale": "0,50"
+                    "rescale": "0,50",
+                    "legend_label": "% cover"
                 },
                 {
                     "id": "rap-pfg-biomass-cog",
                     "display_name": "Perennial Forb & Grass Biomass (RAP)",
                     "group": "Land Cover",
                     "colormap": "ylgn",
-                    "rescale": "0,500"
+                    "rescale": "0,500",
+                    "legend_label": "lbs/acre"
                 }
             ]
         }
