@@ -35,7 +35,21 @@
                     "id": "wgfd-elk-seasonal-pmtiles",
                     "display_name": "Elk Seasonal Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#FF8F00", "fill-opacity": 0.35 },
+                    "default_style": {
+                        "fill-color": ["match", ["get", "RANGE"],
+                            "WIN",    "#5B9BD5",
+                            "CRUWIN", "#0D47A1",
+                            "SWR",    "#FF8C00",
+                            "CRUSWR", "#BF360C",
+                            "SSF",    "#FFD54F",
+                            "YRL",    "#4CAF50",
+                            "WYL",    "#2E7D32",
+                            "CRUWYL", "#1B5E20",
+                            "OUT",    "#9E9E9E",
+                            "#BDBDBD"
+                        ],
+                        "fill-opacity": 0.5
+                    },
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
@@ -49,7 +63,21 @@
                     "id": "wgfd-mule-deer-seasonal-pmtiles",
                     "display_name": "Mule Deer Seasonal Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#66BB6A", "fill-opacity": 0.35 },
+                    "default_style": {
+                        "fill-color": ["match", ["get", "RANGE"],
+                            "WIN",    "#5B9BD5",
+                            "CRUWIN", "#0D47A1",
+                            "SWR",    "#FF8C00",
+                            "CRUSWR", "#BF360C",
+                            "SSF",    "#FFD54F",
+                            "YRL",    "#4CAF50",
+                            "WYL",    "#2E7D32",
+                            "CRUWYL", "#1B5E20",
+                            "OUT",    "#9E9E9E",
+                            "#BDBDBD"
+                        ],
+                        "fill-opacity": 0.5
+                    },
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
@@ -63,7 +91,21 @@
                     "id": "wgfd-pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Seasonal Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#42A5F5", "fill-opacity": 0.35 },
+                    "default_style": {
+                        "fill-color": ["match", ["get", "RANGE"],
+                            "WIN",    "#5B9BD5",
+                            "CRUWIN", "#0D47A1",
+                            "SWR",    "#FF8C00",
+                            "CRUSWR", "#BF360C",
+                            "SSF",    "#FFD54F",
+                            "YRL",    "#4CAF50",
+                            "WYL",    "#2E7D32",
+                            "CRUWYL", "#1B5E20",
+                            "OUT",    "#9E9E9E",
+                            "#BDBDBD"
+                        ],
+                        "fill-opacity": 0.5
+                    },
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
