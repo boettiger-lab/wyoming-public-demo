@@ -28,7 +28,7 @@
                     "id": "wgfd-elk-seasonal-pmtiles",
                     "display_name": "Elk Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_filter": ["in", "RANGE", "CRUWYL", "CRUWIN", "CRUSWR"],
+                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
                     "default_style": { "fill-color": "#E65100", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
@@ -36,7 +36,7 @@
                     "id": "wgfd-mule-deer-seasonal-pmtiles",
                     "display_name": "Mule Deer Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_filter": ["in", "RANGE", "CRUWYL", "CRUWIN", "CRUSWR"],
+                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
                     "default_style": { "fill-color": "#2E7D32", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
@@ -44,7 +44,7 @@
                     "id": "wgfd-pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_filter": ["in", "RANGE", "CRUWYL", "CRUWIN", "CRUSWR"],
+                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
                     "default_style": { "fill-color": "#1565C0", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
