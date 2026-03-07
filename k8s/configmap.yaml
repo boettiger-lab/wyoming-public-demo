@@ -39,7 +39,8 @@ data:
                 "endpoint": "${LLM_ENDPOINT}",
                 "api_key": "${PROXY_KEY}"
             }
-        ]
+        ],
+        "maptiler_key": "${MAPTILER_KEY}"
     }
 
 ---

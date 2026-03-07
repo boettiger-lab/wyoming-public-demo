@@ -60,6 +60,11 @@ spec:
             secretKeyRef:
               name: openrouter-key
               key: OPENROUTER_KEY
+        - name: MAPTILER_KEY
+          valueFrom:
+            secretKeyRef:
+              name: maptiler-key
+              key: MAPTILER_KEY
         command:
         - sh
         - -c
