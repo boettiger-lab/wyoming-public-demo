@@ -80,9 +80,8 @@
                     "id": "nlcd-2024-cog",
                     "display_name": "NLCD 2024 Land Cover",
                     "group": "Land Cover",
-                    "colormap": "rdylgn",
-                    "rescale": "11,95",
-                    "legend_label": "NLCD class"
+                    "colormap": "nlcd",
+                    "legend_type": "categorical"
                 },
                 {
                     "id": "sagebrush-cog",
