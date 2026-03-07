@@ -63,8 +63,8 @@ spec:
         - name: MAPTILER_KEY
           valueFrom:
             secretKeyRef:
-              name: maptiler-key
-              key: MAPTILER_KEY
+              name: maptiler-api-key
+              key: MAPTILER_API_KEY
         command:
         - sh
         - -c
