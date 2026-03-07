@@ -25,55 +25,31 @@
             "collection_id": "wyoming-wildlife-lands",
             "assets": [
                 {
-                    "id": "wgfd-elk-crucial-pmtiles",
+                    "id": "wgfd-elk-seasonal-pmtiles",
                     "display_name": "Elk Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#E65100", "fill-opacity": 0.4 },
-                    "tooltip_fields": ["RANGE", "Acres"]
-                },
-                {
-                    "id": "wgfd-elk-seasonal-pmtiles",
-                    "display_name": "Elk Seasonal Range",
-                    "group": "Wildlife Habitat",
+                    "default_filter": ["in", "RANGE", "CRUWYL", "CRUWIN", "CRUSWR"],
                     "default_style": {
                         "fill-color": ["match", ["get", "RANGE"],
-                            "WIN",    "#5B9BD5",
-                            "CRUWIN", "#0D47A1",
-                            "SWR",    "#FF8C00",
-                            "CRUSWR", "#BF360C",
-                            "SSF",    "#FFD54F",
-                            "YRL",    "#4CAF50",
-                            "WYL",    "#2E7D32",
-                            "CRUWYL", "#1B5E20",
-                            "OUT",    "#9E9E9E",
+                            "CRUWYL", "#D32F2F",
+                            "CRUWIN", "#1565C0",
+                            "CRUSWR", "#2E7D32",
                             "#BDBDBD"
                         ],
                         "fill-opacity": 0.5
                     },
-                    "tooltip_fields": ["RANGE", "Acres"]
-                },
-                {
-                    "id": "wgfd-mule-deer-crucial-pmtiles",
-                    "display_name": "Mule Deer Crucial Range",
-                    "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#2E7D32", "fill-opacity": 0.4 },
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
                     "id": "wgfd-mule-deer-seasonal-pmtiles",
-                    "display_name": "Mule Deer Seasonal Range",
+                    "display_name": "Mule Deer Crucial Range",
                     "group": "Wildlife Habitat",
+                    "default_filter": ["in", "RANGE", "CRUWYL", "CRUWIN", "CRUSWR"],
                     "default_style": {
                         "fill-color": ["match", ["get", "RANGE"],
-                            "WIN",    "#5B9BD5",
-                            "CRUWIN", "#0D47A1",
-                            "SWR",    "#FF8C00",
-                            "CRUSWR", "#BF360C",
-                            "SSF",    "#FFD54F",
-                            "YRL",    "#4CAF50",
-                            "WYL",    "#2E7D32",
-                            "CRUWYL", "#1B5E20",
-                            "OUT",    "#9E9E9E",
+                            "CRUWYL", "#D32F2F",
+                            "CRUWIN", "#1565C0",
+                            "CRUSWR", "#2E7D32",
                             "#BDBDBD"
                         ],
                         "fill-opacity": 0.5
@@ -81,27 +57,15 @@
                     "tooltip_fields": ["RANGE", "Acres"]
                 },
                 {
-                    "id": "wgfd-pronghorn-crucial-pmtiles",
+                    "id": "wgfd-pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#1565C0", "fill-opacity": 0.4 },
-                    "tooltip_fields": ["RANGE", "Acres"]
-                },
-                {
-                    "id": "wgfd-pronghorn-seasonal-pmtiles",
-                    "display_name": "Pronghorn Seasonal Range",
-                    "group": "Wildlife Habitat",
+                    "default_filter": ["in", "RANGE", "CRUWYL", "CRUWIN", "CRUSWR"],
                     "default_style": {
                         "fill-color": ["match", ["get", "RANGE"],
-                            "WIN",    "#5B9BD5",
-                            "CRUWIN", "#0D47A1",
-                            "SWR",    "#FF8C00",
-                            "CRUSWR", "#BF360C",
-                            "SSF",    "#FFD54F",
-                            "YRL",    "#4CAF50",
-                            "WYL",    "#2E7D32",
-                            "CRUWYL", "#1B5E20",
-                            "OUT",    "#9E9E9E",
+                            "CRUWYL", "#D32F2F",
+                            "CRUWIN", "#1565C0",
+                            "CRUSWR", "#2E7D32",
                             "#BDBDBD"
                         ],
                         "fill-opacity": 0.5
