@@ -3,23 +3,39 @@
     "titiler_url": "https://titiler.nrp-nautilus.io",
     "mcp_url": "https://duckdb-mcp.nrp-nautilus.io/mcp",
     "view": {
-        "center": [-107.5, 43.0],
+        "center": [
+            -107.5,
+            43.0
+        ],
         "zoom": 7
     },
-
-    "_llm_note": "Uncomment the llm block below for GitHub Pages / static hosting (no server secrets). For Kubernetes, delete it — the k8s/ manifests inject config.json with API keys at deploy time.",
+    "_llm_note": "Uncomment the llm block below for GitHub Pages / static hosting (no server secrets). For Kubernetes, delete it \u2014 the k8s/ manifests inject config.json with API keys at deploy time.",
     "llm": {
         "user_provided": true,
         "default_endpoint": "https://openrouter.ai/api/v1",
         "models": [
-            { "value": "qwen/qwen3-235b-a22b", "label": "Qwen3 235B" },
-            { "value": "moonshotai/kimi-k2", "label": "Kimi K2" },
-            { "value": "minimax/minimax-m1", "label": "MiniMax M1" },
-            { "value": "anthropic/claude-sonnet-4", "label": "Claude Sonnet" },
-            { "value": "google/gemini-2.5-flash", "label": "Gemini Flash" }
+            {
+                "value": "qwen/qwen3-235b-a22b",
+                "label": "Qwen3 235B"
+            },
+            {
+                "value": "moonshotai/kimi-k2",
+                "label": "Kimi K2"
+            },
+            {
+                "value": "minimax/minimax-m1",
+                "label": "MiniMax M1"
+            },
+            {
+                "value": "anthropic/claude-sonnet-4",
+                "label": "Claude Sonnet"
+            },
+            {
+                "value": "google/gemini-2.5-flash",
+                "label": "Gemini Flash"
+            }
         ]
     },
-
     "collections": [
         {
             "collection_id": "wyoming-wildlife-lands",
@@ -28,59 +44,141 @@
                     "id": "wgfd-elk-seasonal-pmtiles",
                     "display_name": "Elk Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "default_style": { "fill-color": "#E65100", "fill-opacity": 0.5 },
-                    "tooltip_fields": ["RANGE", "Acres"]
+                    "default_filter": [
+                        "match",
+                        [
+                            "get",
+                            "RANGE"
+                        ],
+                        [
+                            "CRUWYL",
+                            "CRUWIN",
+                            "CRUSWR"
+                        ],
+                        true,
+                        false
+                    ],
+                    "default_style": {
+                        "fill-color": "#E65100",
+                        "fill-opacity": 0.5
+                    },
+                    "tooltip_fields": [
+                        "RANGE",
+                        "Acres"
+                    ]
                 },
                 {
                     "id": "wgfd-mule-deer-seasonal-pmtiles",
                     "display_name": "Mule Deer Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "default_style": { "fill-color": "#2E7D32", "fill-opacity": 0.5 },
-                    "tooltip_fields": ["RANGE", "Acres"]
+                    "default_filter": [
+                        "match",
+                        [
+                            "get",
+                            "RANGE"
+                        ],
+                        [
+                            "CRUWYL",
+                            "CRUWIN",
+                            "CRUSWR"
+                        ],
+                        true,
+                        false
+                    ],
+                    "default_style": {
+                        "fill-color": "#2E7D32",
+                        "fill-opacity": 0.5
+                    },
+                    "tooltip_fields": [
+                        "RANGE",
+                        "Acres"
+                    ]
                 },
                 {
                     "id": "wgfd-pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Crucial Range",
                     "group": "Wildlife Habitat",
-                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "default_style": { "fill-color": "#1565C0", "fill-opacity": 0.5 },
-                    "tooltip_fields": ["RANGE", "Acres"]
+                    "default_filter": [
+                        "match",
+                        [
+                            "get",
+                            "RANGE"
+                        ],
+                        [
+                            "CRUWYL",
+                            "CRUWIN",
+                            "CRUSWR"
+                        ],
+                        true,
+                        false
+                    ],
+                    "default_style": {
+                        "fill-color": "#1565C0",
+                        "fill-opacity": 0.5
+                    },
+                    "tooltip_fields": [
+                        "RANGE",
+                        "Acres"
+                    ]
                 },
                 {
                     "id": "sage-grouse-priority-pmtiles",
                     "display_name": "Sage-Grouse Priority Habitat",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#6A1B9A", "fill-opacity": 0.4 },
-                    "tooltip_fields": ["NAME", "Acres"]
+                    "default_style": {
+                        "fill-color": "#6A1B9A",
+                        "fill-opacity": 0.4
+                    },
+                    "tooltip_fields": [
+                        "NAME",
+                        "Acres"
+                    ]
                 },
                 {
                     "id": "blm-sma-pmtiles",
                     "display_name": "BLM Surface Management Areas",
                     "group": "Land Management",
-                    "default_style": { "fill-color": "#795548", "fill-opacity": 0.3 },
-                    "tooltip_fields": ["ADMIN_UNIT_NAME", "ADMIN_UNIT_TYPE", "ADMIN_DEPT_CODE"]
+                    "default_style": {
+                        "fill-color": "#795548",
+                        "fill-opacity": 0.3
+                    },
+                    "tooltip_fields": [
+                        "ADMIN_UNIT_NAME",
+                        "ADMIN_UNIT_TYPE",
+                        "ADMIN_DEPT_CODE"
+                    ]
                 },
                 {
                     "id": "wy-counties-pmtiles",
                     "display_name": "Wyoming Counties",
                     "group": "Administrative",
-                    "default_style": { "fill-color": "rgba(0,0,0,0)", "fill-opacity": 0 },
-                    "tooltip_fields": ["COUNTYNAME"]
+                    "default_style": {
+                        "fill-color": "rgba(0,0,0,0)",
+                        "fill-opacity": 0
+                    },
+                    "tooltip_fields": [
+                        "COUNTYNAME"
+                    ]
                 },
                 {
                     "id": "wyoming-places-pmtiles",
                     "display_name": "Wyoming Incorporated Places",
                     "group": "Administrative",
-                    "default_style": { "fill-color": "#9C27B0", "fill-opacity": 0.4 },
-                    "tooltip_fields": ["Name", "County", "Population_2010", "County_Seat"]
+                    "default_style": {
+                        "fill-color": "#9C27B0",
+                        "fill-opacity": 0.4
+                    },
+                    "tooltip_fields": [
+                        "Name",
+                        "County",
+                        "Population_2010",
+                        "County_Seat"
+                    ]
                 },
                 {
                     "id": "nlcd-2024-cog",
                     "display_name": "NLCD 2024 Land Cover",
                     "group": "Land Cover",
-                    "colormap": "nlcd",
                     "legend_type": "categorical"
                 },
                 {
