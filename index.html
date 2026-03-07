@@ -78,7 +78,7 @@
         };
 
         // Global basemap switcher — called by UI buttons
-        window._wyomingSetBasemap = function(name) {
+        window._setBasemap = function(name) {
             if (!_map || !BASEMAPS[name]) return;
             // Toggle raster layer visibility
             Object.keys(BASEMAPS).forEach(key => {
@@ -180,9 +180,9 @@
         <div class="menu-section">
             <label class="section-title">Basemap</label>
             <div class="basemap-toggle-group">
-                <button class="basemap-btn active" data-basemap="natgeo"    onclick="window._wyomingSetBasemap('natgeo')">NatGeo</button>
-                <button class="basemap-btn"         data-basemap="satellite" onclick="window._wyomingSetBasemap('satellite')">Satellite</button>
-                <button class="basemap-btn"         data-basemap="plain"     onclick="window._wyomingSetBasemap('plain')">Plain</button>
+                <button class="basemap-btn active" data-basemap="natgeo"    onclick="window._setBasemap('natgeo')">NatGeo</button>
+                <button class="basemap-btn"         data-basemap="satellite" onclick="window._setBasemap('satellite')">Satellite</button>
+                <button class="basemap-btn"         data-basemap="plain"     onclick="window._setBasemap('plain')">Plain</button>
             </div>
         </div>
         <div class="menu-section">
