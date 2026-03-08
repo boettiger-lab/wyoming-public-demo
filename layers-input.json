@@ -185,9 +185,7 @@
                     "id": "sagebrush-cog",
                     "display_name": "Sagebrush Conservation Design",
                     "group": "Land Cover",
-                    "colormap": "rdylgn",
-                    "rescale": "1,3",
-                    "legend_label": "class (1=Core, 3=Other)"
+                    "legend_type": "categorical"
                 },
                 {
                     "id": "rap-arte-cog",
