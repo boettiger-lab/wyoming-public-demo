@@ -80,7 +80,6 @@
                     "id": "nlcd-2024-cog",
                     "display_name": "NLCD 2024 Land Cover",
                     "group": "Land Cover",
-                    "colormap": "nlcd",
                     "legend_type": "categorical"
                 },
                 {
