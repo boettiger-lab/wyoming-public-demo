@@ -173,14 +173,26 @@
                     "id": "blm-sma-pmtiles",
                     "display_name": "BLM Surface Management Areas",
                     "group": "Land Management",
+                    "default_filter": [
+                        "!=", ["get", "ADMIN_AGENCY_CODE"], "PVT"
+                    ],
                     "default_style": {
-                        "fill-color": "#795548",
-                        "fill-opacity": 0.3
+                        "fill-color": ["match", ["get", "ADMIN_AGENCY_CODE"],
+                            "BLM",  "#D4A017",
+                            "USFS", "#2D7D32",
+                            "NPS",  "#4E7D5A",
+                            "FWS",  "#1565C0",
+                            "USBR", "#6A1B9A",
+                            "DOD",  "#B71C1C",
+                            "ST",   "#546E7A",
+                            "#9E9E9E"
+                        ],
+                        "fill-opacity": 0.4
                     },
                     "tooltip_fields": [
+                        "ADMIN_AGENCY_CODE",
                         "ADMIN_UNIT_NAME",
-                        "ADMIN_UNIT_TYPE",
-                        "ADMIN_DEPT_CODE"
+                        "ADMIN_UNIT_TYPE"
                     ]
                 },
                 {
@@ -190,6 +202,10 @@
                     "default_style": {
                         "fill-color": "rgba(0,0,0,0)",
                         "fill-opacity": 0
+                    },
+                    "outline_style": {
+                        "line-color": "rgba(0,0,0,0.7)",
+                        "line-width": 2
                     },
                     "tooltip_fields": [
                         "COUNTYNAME"
