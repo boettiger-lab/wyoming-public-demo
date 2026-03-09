@@ -160,17 +160,14 @@
                     "id": "ungulate-migration-pmtiles",
                     "display_name": "Ungulate Migration Routes",
                     "group": "Wildlife Habitat",
+                    "layer_type": "line",
                     "default_style": {
-                        "fill-color": "rgba(0,0,0,0)",
-                        "fill-opacity": 0
-                    },
-                    "outline_style": {
                         "line-color": ["match", ["get", "species"],
-                            "Elk",              "#E65100",
-                            "Mule deer",        "#2E7D32",
-                            "Pronghorn",        "#1565C0",
-                            "Moose",            "#6D4C41",
-                            "White-tailed deer","#558B2F",
+                            "Elk",               "#E65100",
+                            "Mule deer",         "#2E7D32",
+                            "Pronghorn",         "#1565C0",
+                            "Moose",             "#6D4C41",
+                            "White-tailed deer", "#558B2F",
                             "#9E9E9E"
                         ],
                         "line-width": 1.5,
