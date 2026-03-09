@@ -171,7 +171,7 @@
                             "#9E9E9E"
                         ],
                         "line-width": 1.5,
-                        "line-opacity": 0.7
+                        "line-opacity": 0.5
                     },
                     "tooltip_fields": ["species", "herdid", "season", "year"]
                 },
@@ -280,6 +280,20 @@
                     "colormap": "ylgn",
                     "rescale": "0,500",
                     "legend_label": "lbs/acre"
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-rap-pfg-cover",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/rap-pfg-biomass/stac-collection.json",
+            "assets": [
+                {
+                    "id": "cog",
+                    "display_name": "Perennial Forb & Grass Cover (RAP)",
+                    "group": "Land Cover",
+                    "colormap": "ylgn",
+                    "rescale": "0,100",
+                    "legend_label": "% cover"
                 }
             ]
         }
