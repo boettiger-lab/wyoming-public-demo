@@ -38,6 +38,41 @@
     },
     "collections": [
         {
+            "collection_id": "pad-us-4.1-combined",
+            "assets": [
+                {
+                    "id": "pmtiles",
+                    "display_name": "Protected Areas",
+                    "group": "Land Ownership",
+                    "default_filter": [
+                        "match",
+                        ["get", "GAP_Sts"],
+                        ["1", "2"],
+                        true,
+                        false
+                    ],
+                    "default_style": {
+                        "fill-color": [
+                            "match", ["get", "Mang_Name"],
+                            "BLM",  "#D4A017",
+                            "USFS", "#2D7D32",
+                            "NPS",  "#4E7D5A",
+                            "FWS",  "#1565C0",
+                            "USBR", "#6A1B9A",
+                            "DOD",  "#B71C1C",
+                            "SLB",  "#E67E22",
+                            "NGO",  "#AD1457",
+                            "TRIB", "#E65100",
+                            "#888888"
+                        ],
+                        "fill-opacity": 0.5,
+                        "fill-outline-color": "rgba(0,0,0,0.15)"
+                    },
+                    "tooltip_fields": ["Unit_Nm", "Mang_Name", "GAP_Sts", "GIS_Acres"]
+                }
+            ]
+        },
+        {
             "collection_id": "wyoming-wildlife-lands",
             "assets": [
                 {
