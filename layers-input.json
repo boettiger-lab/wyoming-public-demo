@@ -170,8 +170,7 @@
                             "White-tailed deer", "#558B2F",
                             "#9E9E9E"
                         ],
-                        "line-width": 1.5,
-                        "line-opacity": 0.5
+                        "line-opacity": 0.7
                     },
                     "tooltip_fields": ["species", "herdid", "season", "year"]
                 },
