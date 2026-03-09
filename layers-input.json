@@ -176,7 +176,7 @@
                 },
                 {
                     "id": "sage-grouse-priority-pmtiles",
-                    "display_name": "Sage-Grouse Priority Habitat",
+                    "display_name": "Sage-Grouse Core Areas",
                     "group": "Wildlife Habitat",
                     "default_style": {
                         "fill-color": "#6A1B9A",
