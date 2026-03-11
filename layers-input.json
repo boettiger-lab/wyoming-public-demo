@@ -141,9 +141,11 @@
                     "id": "wyoming-places-pmtiles",
                     "display_name": "Wyoming Incorporated Places",
                     "group": "Land Management",
+                    "layer_type": "circle",
                     "default_style": {
-                        "fill-color": "#9C27B0",
-                        "fill-opacity": 0.4
+                        "circle-color": "#9C27B0",
+                        "circle-radius": 6,
+                        "circle-opacity": 0.85
                     },
                     "tooltip_fields": ["Name", "County", "Population_2010", "County_Seat"]
                 }
