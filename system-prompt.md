@@ -44,19 +44,6 @@ The WGFD (Wyoming Game & Fish Department) seasonal range layers use a `RANGE` fi
 
 **Key point:** `CRUSWR` = **Crucial Severe Winter Relief**. It is habitat used only during occasionally extreme winters, and it is crucial (population-determining). It has nothing to do with summer range.
 
-## SQL query guidelines
-
-The DuckDB instance is pre-configured with:
-- Extensions: `httpfs`, `h3`, `spatial`
-- Internal S3 endpoint for fast access
-
-When writing SQL:
-- Use `read_parquet('s3://…')` with the S3 paths from the dataset catalog below
-- For partitioned datasets, use the `/**` wildcard path
-- H3 columns are typically `h3_index` at resolution 4–8
-- Use `h3_cell_to_boundary_wkt(h3_index)` for geometry conversion
-- Always use `LIMIT` to keep results manageable
-
 ## Available datasets
 
 The section below is automatically injected at runtime with full dataset details including layer IDs, parquet paths, column schemas, and filterable properties. Use `list_datasets` or `get_dataset_details` tools for live info.
