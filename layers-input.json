@@ -20,7 +20,7 @@
     },
     "collections": [
         {
-            "collection_id": "wyoming-wildlife-lands",
+            "collection_id": "wyoming-nlcd-2024",
             "assets": [
                 {
                     "id": "nlcd-2024-cog",
@@ -28,13 +28,23 @@
                     "group": "Land Cover",
                     "legend_type": "categorical",
                     "paint": {"raster-opacity": 0.5}
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-sagebrush-design",
+            "assets": [
                 {
-                    "id": "sagebrush-cog",
+                    "id": "sagebrush-design-cog",
                     "display_name": "Sagebrush Conservation Design",
                     "group": "Land Cover",
                     "legend_type": "categorical"
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-rap-arte",
+            "assets": [
                 {
                     "id": "rap-arte-cog",
                     "display_name": "Sagebrush Cover (RAP)",
@@ -42,7 +52,12 @@
                     "colormap": "greens",
                     "rescale": "0,60",
                     "legend_label": "% cover"
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-rap-iag",
+            "assets": [
                 {
                     "id": "rap-iag-cog",
                     "display_name": "Invasive Annual Grass (RAP)",
@@ -50,7 +65,12 @@
                     "colormap": "reds",
                     "rescale": "0,50",
                     "legend_label": "% cover"
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-wgfd-elk-seasonal",
+            "assets": [
                 {
                     "id": "wgfd-elk-seasonal-pmtiles",
                     "display_name": "Elk Crucial Range",
@@ -59,7 +79,12 @@
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
                     "default_style": { "fill-color": "#E65100", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-wgfd-mule-deer-seasonal",
+            "assets": [
                 {
                     "id": "wgfd-mule-deer-seasonal-pmtiles",
                     "display_name": "Mule Deer Crucial Range",
@@ -68,7 +93,12 @@
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
                     "default_style": { "fill-color": "#2E7D32", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-wgfd-pronghorn-seasonal",
+            "assets": [
                 {
                     "id": "wgfd-pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Crucial Range",
@@ -77,14 +107,24 @@
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
                     "default_style": { "fill-color": "#1565C0", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-sage-grouse-priority",
+            "assets": [
                 {
                     "id": "sage-grouse-priority-pmtiles",
                     "display_name": "Sage-Grouse Core Areas",
                     "group": "Wildlife Habitat",
                     "default_style": { "fill-color": "#6A1B9A", "fill-opacity": 0.4 },
                     "tooltip_fields": ["NAME", "Acres"]
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-ungulate-migration",
+            "assets": [
                 {
                     "id": "ungulate-migration-pmtiles",
                     "display_name": "Ungulate Migration Routes",
@@ -102,7 +142,12 @@
                         "line-opacity": 0.7
                     },
                     "tooltip_fields": ["species", "herdid", "season", "year"]
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-blm-sma",
+            "assets": [
                 {
                     "id": "blm-sma-pmtiles",
                     "display_name": "BLM Surface Management Areas",
@@ -122,7 +167,12 @@
                         "fill-opacity": 0.4
                     },
                     "tooltip_fields": ["ADMIN_AGENCY_CODE", "ADMIN_UNIT_NAME", "ADMIN_UNIT_TYPE"]
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-wy-counties",
+            "assets": [
                 {
                     "id": "wy-counties-pmtiles",
                     "display_name": "Wyoming Counties",
@@ -136,7 +186,12 @@
                         "line-width": 2
                     },
                     "tooltip_fields": ["COUNTYNAME"]
-                },
+                }
+            ]
+        },
+        {
+            "collection_id": "wyoming-wyoming-places",
+            "assets": [
                 {
                     "id": "wyoming-places-pmtiles",
                     "display_name": "Wyoming Incorporated Places",
@@ -156,7 +211,7 @@
             "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/rap-pfg-biomass/stac-collection.json",
             "assets": [
                 {
-                    "id": "cog",
+                    "id": "rap-pfg-cover-cog",
                     "display_name": "Perennial Forb & Grass Cover (RAP)",
                     "group": "Land Cover",
                     "colormap": "ylgn",
@@ -169,7 +224,7 @@
             "collection_id": "pad-us-4.1-combined",
             "assets": [
                 {
-                    "id": "pmtiles",
+                    "id": "combined-pmtiles",
                     "display_name": "Protected Areas",
                     "group": "Land Ownership",
                     "default_filter": ["match", ["get", "GAP_Sts"], ["1", "2"], true, false],
