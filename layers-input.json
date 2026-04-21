@@ -21,9 +21,9 @@
     "welcome": {
         "message": "Explore Wyoming wildlife habitat and public lands. Ask me to show layers, filter by species or agency, or run quick calculations.",
         "examples": [
-            "Show elk and mule deer crucial winter range",
+            "Show sage-grouse core areas and sagebrush cover",
             "Show only National Forest and BLM lands, color them green and gold",
-            "Color ungulate migration routes by species",
+            "Show sagebrush cover and invasive annual grass layers",
             "Show sage-grouse core areas and filter protected areas to GAP status 1 and 2",
             "How many acres of crucial elk winter range are there in Wyoming?",
             "Which counties have the most pronghorn habitat?"
@@ -245,6 +245,7 @@
         },
         {
             "collection_id": "pad-us-4.1-combined",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-padus/padus-4-1/combined/stac-collection.json",
             "assets": [
                 {
                     "id": "combined-pmtiles",
