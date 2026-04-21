@@ -21,6 +21,7 @@
     "collections": [
         {
             "collection_id": "wyoming-nlcd-2024",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/nlcd-2024/stac-collection.json",
             "assets": [
                 {
                     "id": "nlcd-2024-cog",
@@ -33,6 +34,7 @@
         },
         {
             "collection_id": "wyoming-sagebrush-design",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/sagebrush-design/stac-collection.json",
             "assets": [
                 {
                     "id": "sagebrush-design-cog",
@@ -44,6 +46,7 @@
         },
         {
             "collection_id": "wyoming-rap-arte",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/rap-arte/stac-collection.json",
             "assets": [
                 {
                     "id": "rap-arte-cog",
@@ -57,6 +60,7 @@
         },
         {
             "collection_id": "wyoming-rap-iag",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/rap-iag/stac-collection.json",
             "assets": [
                 {
                     "id": "rap-iag-cog",
@@ -70,6 +74,7 @@
         },
         {
             "collection_id": "wyoming-wgfd-elk-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-elk-seasonal/stac-collection.json",
             "assets": [
                 {
                     "id": "wgfd-elk-seasonal-pmtiles",
@@ -84,6 +89,7 @@
         },
         {
             "collection_id": "wyoming-wgfd-mule-deer-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-mule-deer-seasonal/stac-collection.json",
             "assets": [
                 {
                     "id": "wgfd-mule-deer-seasonal-pmtiles",
@@ -98,6 +104,7 @@
         },
         {
             "collection_id": "wyoming-wgfd-pronghorn-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-pronghorn-seasonal/stac-collection.json",
             "assets": [
                 {
                     "id": "wgfd-pronghorn-seasonal-pmtiles",
@@ -112,6 +119,7 @@
         },
         {
             "collection_id": "wyoming-sage-grouse-priority",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/sage-grouse-priority/stac-collection.json",
             "assets": [
                 {
                     "id": "sage-grouse-priority-pmtiles",
@@ -124,6 +132,7 @@
         },
         {
             "collection_id": "wyoming-ungulate-migration",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/ungulate-migration/stac-collection.json",
             "assets": [
                 {
                     "id": "ungulate-migration-pmtiles",
@@ -147,6 +156,7 @@
         },
         {
             "collection_id": "wyoming-blm-sma",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/blm-sma/stac-collection.json",
             "assets": [
                 {
                     "id": "blm-sma-pmtiles",
@@ -172,6 +182,7 @@
         },
         {
             "collection_id": "wyoming-wy-counties",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wy-counties/stac-collection.json",
             "assets": [
                 {
                     "id": "wy-counties-pmtiles",
@@ -191,6 +202,7 @@
         },
         {
             "collection_id": "wyoming-wyoming-places",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wyoming-places/stac-collection.json",
             "assets": [
                 {
                     "id": "wyoming-places-pmtiles",
