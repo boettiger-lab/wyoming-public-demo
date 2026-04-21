@@ -2,6 +2,7 @@
     "catalog": "https://s3-west.nrp-nautilus.io/public-data/stac/catalog.json",
     "titiler_url": "https://titiler.nrp-nautilus.io",
     "mcp_url": "https://duckdb-mcp.nrp-nautilus.io/mcp",
+    "draw_enabled": true,
     "view": {
         "center": [-107.5, 43.0],
         "zoom": 7
