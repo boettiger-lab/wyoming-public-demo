@@ -18,6 +18,17 @@
             { "value": "google/gemini-2.5-flash", "label": "Gemini Flash" }
         ]
     },
+    "welcome": {
+        "message": "Explore Wyoming wildlife habitat and public lands. Ask me to show layers, filter by species or agency, or run quick calculations.",
+        "examples": [
+            "Show elk and mule deer crucial winter range",
+            "Show only National Forest and BLM lands, color them green and gold",
+            "Color ungulate migration routes by species",
+            "Show sage-grouse core areas and filter protected areas to GAP status 1 and 2",
+            "How many acres of crucial elk winter range are there in Wyoming?",
+            "Which counties have the most pronghorn habitat?"
+        ]
+    },
     "collections": [
         {
             "collection_id": "wyoming-nlcd-2024",
