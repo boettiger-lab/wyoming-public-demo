@@ -19,11 +19,11 @@ data:
   config.template.json: |
     {
         "mcp_server_url": "${MCP_SERVER_URL}",
-        "llm_model": "minimax-m2",
+        "llm_model": "kimi",
         "llm_models": [
             {
-                "value": "glm-4.7",
-                "label": "NRP GLM-4.7",
+                "value": "glm-5",
+                "label": "NRP GLM-5",
                 "endpoint": "/api/llm",
                 "api_key": "unused"
             },
@@ -41,7 +41,7 @@ data:
             },
             {
                 "value": "kimi",
-                "label": "NRP Kimi K2.5",
+                "label": "NRP Kimi K2.6",
                 "endpoint": "/api/llm",
                 "api_key": "unused"
             },
