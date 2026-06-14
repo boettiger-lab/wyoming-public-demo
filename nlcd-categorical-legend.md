@@ -3,7 +3,7 @@
 **Date:** 2026-03-07
 **Status:** Implemented
 **Branch:** fix/menu-header-title → merged to main
-**Repos involved:** `wyoming-public-demo`, `geo-agent`
+**Repos involved:** `wyoming-public-demo`, `GLEN`
 
 ---
 
@@ -291,9 +291,9 @@ With 20 NLCD classes the legend section will be ~200px tall; `#legend-content` a
 |---|---|---|
 | `nlcd-2024/stac-collection.json` | S3 / NRP | Add classification extension + full band metadata |
 | `layers-input.json` | wyoming-public-demo | `colormap: "nlcd"`, `legend_type: "categorical"`, remove rescale/legend_label |
-| `app/dataset-catalog.js` | geo-agent | Extract + pass `legendType`, `legendClasses` |
-| `app/map-manager.js` | geo-agent | Categorical branch in `_showRasterLegend` |
-| `app/style.css` | geo-agent | No changes (existing styles sufficient) |
+| `app/dataset-catalog.js` | GLEN | Extract + pass `legendType`, `legendClasses` |
+| `app/map-manager.js` | GLEN | Categorical branch in `_showRasterLegend` |
+| `app/style.css` | GLEN | No changes (existing styles sufficient) |
 
 ---
 

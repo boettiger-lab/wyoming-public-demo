@@ -12,7 +12,7 @@
     }
   ],
   "title": "Public GYE Explorer",
-  "description": "An interactive decision-support tool for wildlife habitat and public lands in the Greater Yellowstone Ecosystem, centered on Wyoming. Built on the geo-agent agentic framework, it pairs a MapLibre interface with a natural-language agent that discovers datasets and runs SQL queries over H3-indexed data through MCP tools. Users can explore Wyoming Game & Fish Department seasonal wildlife range data (such as crucial winter range and migration corridors), public land management boundaries, and related habitat datasets to support conservation planning and land management. It supports multiple open-weights language models for reproducible, extensible conservation analytics.",
+  "description": "An interactive decision-support tool for wildlife habitat and public lands in the Greater Yellowstone Ecosystem, centered on Wyoming. Built on the Geospatial LLM-Enabled Navigator (GLEN) framework, it pairs a MapLibre interface with a natural-language agent that discovers datasets and runs SQL queries over H3-indexed data through MCP tools. Users can explore Wyoming Game & Fish Department seasonal wildlife range data (such as crucial winter range and migration corridors), public land management boundaries, and related habitat datasets to support conservation planning and land management. It supports multiple open-weights language models for reproducible, extensible conservation analytics.",
   "access_right": "open",
   "license": "bsd-2-clause",
   "doi": "10.5281/zenodo.20674178",
