@@ -2,6 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: biodiversity
   name: wyoming-public-demo-config
 data:
   config.template.json: |
@@ -47,6 +48,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: biodiversity
   name: wyoming-public-demo-nginx
 data:
   nginx.conf: |
