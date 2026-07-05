@@ -46,5 +46,5 @@ The WGFD (Wyoming Game & Fish Department) seasonal range layers use a `RANGE` fi
 
 ## Available datasets
 
-The section below is automatically injected at runtime with full dataset details including layer IDs, parquet paths, column schemas, and filterable properties. Use `list_datasets` or `get_dataset_details` tools for live info.
+The section below is automatically injected at runtime with full dataset details including layer IDs, parquet paths, column schemas, and filterable properties. Consult the dataset metadata for live info.
 
