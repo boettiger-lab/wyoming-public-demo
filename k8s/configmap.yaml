@@ -23,6 +23,12 @@ data:
         "llm_model": "kimi",
         "llm_models": [
             {
+                "value": "qwen",
+                "label": "DSE-nimbus",
+                "endpoint": "/api/llm",
+                "api_key": "unused"
+            },
+            {
                 "value": "glm-5",
                 "label": "NRP GLM-5",
                 "endpoint": "/api/llm",
