@@ -20,8 +20,14 @@ data:
   config.template.json: |
     {
         "mcp_server_url": "${MCP_SERVER_URL}",
-        "llm_model": "kimi",
+        "llm_model": "qwen",
         "llm_models": [
+            {
+                "value": "qwen",
+                "label": "DSE-nimbus",
+                "endpoint": "/api/llm",
+                "api_key": "unused"
+            },
             {
                 "value": "glm-5",
                 "label": "NRP GLM-5",
