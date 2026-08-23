@@ -89,11 +89,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-wgfd-elk-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-elk-seasonal/stac-collection.json",
+            "collection_id": "wgfd-elk-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/elk-seasonal/stac-collection.json",
             "assets": [
                 {
-                    "id": "wgfd-elk-seasonal-pmtiles",
+                    "id": "elk-seasonal-pmtiles",
                     "display_name": "Elk Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
@@ -103,11 +103,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-wgfd-mule-deer-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-mule-deer-seasonal/stac-collection.json",
+            "collection_id": "wgfd-mule-deer-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/mule-deer-seasonal/stac-collection.json",
             "assets": [
                 {
-                    "id": "wgfd-mule-deer-seasonal-pmtiles",
+                    "id": "mule-deer-seasonal-pmtiles",
                     "display_name": "Mule Deer Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
@@ -117,11 +117,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-wgfd-pronghorn-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-pronghorn-seasonal/stac-collection.json",
+            "collection_id": "wgfd-pronghorn-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/pronghorn-seasonal/stac-collection.json",
             "assets": [
                 {
-                    "id": "wgfd-pronghorn-seasonal-pmtiles",
+                    "id": "pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
@@ -131,8 +131,8 @@
             ]
         },
         {
-            "collection_id": "wyoming-sage-grouse-priority",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/sage-grouse-priority/stac-collection.json",
+            "collection_id": "wgfd-sage-grouse-priority",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/sage-grouse-priority/stac-collection.json",
             "assets": [
                 {
                     "id": "sage-grouse-priority-pmtiles",
@@ -195,12 +195,12 @@
             ]
         },
         {
-            "collection_id": "wyoming-wy-counties",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wy-counties/stac-collection.json",
+            "collection_id": "census-2024-county",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/county/stac-collection.json",
             "assets": [
                 {
-                    "id": "wy-counties-pmtiles",
-                    "display_name": "Wyoming Counties",
+                    "id": "county-pmtiles",
+                    "display_name": "County Boundaries",
                     "group": "Land Management",
                     "default_style": {
                         "fill-color": "rgba(0,0,0,0)",
@@ -215,12 +215,12 @@
             ]
         },
         {
-            "collection_id": "wyoming-wyoming-places",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wyoming-places/stac-collection.json",
+            "collection_id": "census-2024-place",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/place/stac-collection.json",
             "assets": [
                 {
-                    "id": "wyoming-places-pmtiles",
-                    "display_name": "Wyoming Incorporated Places",
+                    "id": "place-pmtiles",
+                    "display_name": "Incorporated Places",
                     "group": "Land Management",
                     "layer_type": "circle",
                     "default_style": {
