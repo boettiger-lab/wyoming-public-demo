@@ -36,11 +36,11 @@
     },
     "collections": [
         {
-            "collection_id": "wyoming-nlcd-2024",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/nlcd-2024/stac-collection.json",
+            "collection_id": "nlcd",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/stac-collection.json",
             "assets": [
                 {
-                    "id": "nlcd-2024-cog",
+                    "id": "nlcd-cog-2024",
                     "display_name": "NLCD 2024 Land Cover",
                     "group": "Land Cover",
                     "legend_type": "categorical",
@@ -49,12 +49,12 @@
             ]
         },
         {
-            "collection_id": "wyoming-sagebrush-design",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/sagebrush-design/stac-collection.json",
+            "collection_id": "usgs-sagebrush-conservation-design",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-usgs-sagebrush/sagebrush-conservation-design/stac-collection.json",
             "assets": [
                 {
-                    "id": "sagebrush-design-cog",
-                    "display_name": "Sagebrush Conservation Design",
+                    "id": "sagebrush-conservation-design-2017-2020-cog",
+                    "display_name": "Sagebrush Conservation Design (2017–2020)",
                     "group": "Land Cover",
                     "legend_type": "categorical"
                 }
