@@ -77,8 +77,8 @@
             ]
         },
         {
-            "collection_id": "wyoming-rap-arte",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/rap-arte/stac-collection.json",
+            "collection_id": "rap-arte",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-arte/stac-collection.json",
             "assets": [
                 {
                     "id": "rap-arte-cog",
@@ -91,8 +91,8 @@
             ]
         },
         {
-            "collection_id": "wyoming-rap-iag",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/rap-iag/stac-collection.json",
+            "collection_id": "rap-iag",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-iag/stac-collection.json",
             "assets": [
                 {
                     "id": "rap-iag-cog",
@@ -100,6 +100,20 @@
                     "group": "Land Cover",
                     "colormap": "reds",
                     "rescale": "0,50",
+                    "legend_label": "% cover"
+                }
+            ]
+        },
+        {
+            "collection_id": "rap-afg-cover",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-afg-cover/stac-collection.json",
+            "assets": [
+                {
+                    "id": "rap-afg-cover-cog",
+                    "display_name": "Annual Forb & Grass Cover (RAP)",
+                    "group": "Land Cover",
+                    "colormap": "oranges",
+                    "rescale": "0,60",
                     "legend_label": "% cover"
                 }
             ]
@@ -249,8 +263,8 @@
             ]
         },
         {
-            "collection_id": "wyoming-rap-pfg-cover",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/rap-pfg-biomass/stac-collection.json",
+            "collection_id": "rap-pfg-cover",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-pfg-cover/stac-collection.json",
             "assets": [
                 {
                     "id": "rap-pfg-cover-cog",
