@@ -11,7 +11,7 @@
     "header": {
         "title": "Public GYE Explorer",
         "partner": {
-            "src": "assets/beyond-yellowstone-living-lab-white.png",
+            "src": "https://cdn.jsdelivr.net/gh/boettiger-lab/wyoming-public-demo@9e977f5e076a41209a8fa6cbdbb56df4e64cad2b/assets/beyond-yellowstone-living-lab-white.png",
             "alt": "Beyond Yellowstone Living Lab",
             "href": "https://www.beyondyellowstone.org/"
         }
