@@ -7,6 +7,22 @@
     "titiler_url": "https://titiler.nrp-nautilus.io",
     "mcp_url": "https://duckdb-mcp.nrp-nautilus.io/mcp",
     "draw_enabled": true,
+    "export": true,
+    "header": {
+        "title": "Public GYE Explorer",
+        "partner": {
+            "src": "assets/beyond-yellowstone-living-lab-white.png",
+            "alt": "Beyond Yellowstone Living Lab",
+            "href": "https://www.beyondyellowstone.org/"
+        }
+    },
+    "theme": {
+        "mode": "dark",
+        "surface": "#0f2213",
+        "text": "#f2f6f7",
+        "primary": "#2c7a38",
+        "backdrop": "#0a170d"
+    },
     "view": {
         "center": [-107.5, 43.0],
         "zoom": 7
