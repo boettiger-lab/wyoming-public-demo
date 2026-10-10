@@ -54,6 +54,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/boettiger-lab/geo-agent@v3.35.0/app/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/boettiger-lab/geo-agent@v3.35.0/app/chat.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/boettiger-lab/geo-agent@v3.35.0/app/sidebar.css">
+    <!-- Beyond Yellowstone partner mark is a stacked lockup; at the default 24px
+         its wordmark is unreadable, so give it most of the 64px header band. -->
+    <style>
+        @media (min-width: 700px) {
+            .app-header-logo--partner { height: 44px; max-width: 220px; }
+        }
+    </style>
 </head>
 
 <body>
