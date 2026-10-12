@@ -52,11 +52,11 @@
     },
     "collections": [
         {
-            "collection_id": "wyoming-nlcd-2024",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/nlcd-2024/stac-collection.json",
+            "collection_id": "nlcd",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/stac-collection.json",
             "assets": [
                 {
-                    "id": "nlcd-2024-cog",
+                    "id": "nlcd-cog-2024",
                     "display_name": "NLCD 2024 Land Cover",
                     "group": "Land Cover",
                     "legend_type": "categorical",
@@ -65,12 +65,12 @@
             ]
         },
         {
-            "collection_id": "wyoming-sagebrush-design",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/sagebrush-design/stac-collection.json",
+            "collection_id": "usgs-sagebrush-conservation-design",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-usgs-sagebrush/sagebrush-conservation-design/stac-collection.json",
             "assets": [
                 {
-                    "id": "sagebrush-design-cog",
-                    "display_name": "Sagebrush Conservation Design",
+                    "id": "sagebrush-conservation-design-2017-2020-cog",
+                    "display_name": "Sagebrush Conservation Design (2017–2020)",
                     "group": "Land Cover",
                     "legend_type": "categorical"
                 }
@@ -105,11 +105,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-wgfd-elk-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-elk-seasonal/stac-collection.json",
+            "collection_id": "wgfd-elk-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/elk-seasonal/stac-collection.json",
             "assets": [
                 {
-                    "id": "wgfd-elk-seasonal-pmtiles",
+                    "id": "elk-seasonal-pmtiles",
                     "display_name": "Elk Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
@@ -119,11 +119,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-wgfd-mule-deer-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-mule-deer-seasonal/stac-collection.json",
+            "collection_id": "wgfd-mule-deer-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/mule-deer-seasonal/stac-collection.json",
             "assets": [
                 {
-                    "id": "wgfd-mule-deer-seasonal-pmtiles",
+                    "id": "mule-deer-seasonal-pmtiles",
                     "display_name": "Mule Deer Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
@@ -133,11 +133,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-wgfd-pronghorn-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wgfd-pronghorn-seasonal/stac-collection.json",
+            "collection_id": "wgfd-pronghorn-seasonal",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/pronghorn-seasonal/stac-collection.json",
             "assets": [
                 {
-                    "id": "wgfd-pronghorn-seasonal-pmtiles",
+                    "id": "pronghorn-seasonal-pmtiles",
                     "display_name": "Pronghorn Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
@@ -147,8 +147,8 @@
             ]
         },
         {
-            "collection_id": "wyoming-sage-grouse-priority",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/sage-grouse-priority/stac-collection.json",
+            "collection_id": "wgfd-sage-grouse-priority",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/sage-grouse-priority/stac-collection.json",
             "assets": [
                 {
                     "id": "sage-grouse-priority-pmtiles",
@@ -160,11 +160,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-ungulate-migration",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/ungulate-migration/stac-collection.json",
+            "collection_id": "usgs-ungulate-migration-routes",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-usgs-ungulate-migration/ungulate-routes/stac-collection.json",
             "assets": [
                 {
-                    "id": "ungulate-migration-pmtiles",
+                    "id": "ungulate-routes-pmtiles",
                     "display_name": "Ungulate Migration Routes",
                     "group": "Wildlife Habitat",
                     "visible": true,
@@ -172,15 +172,15 @@
                     "default_style": {
                         "line-color": ["match", ["get", "species"],
                             "Elk",               "#E65100",
-                            "Mule deer",         "#2E7D32",
+                            "MuleDeer",          "#2E7D32",
                             "Pronghorn",         "#1565C0",
                             "Moose",             "#6D4C41",
-                            "White-tailed deer", "#558B2F",
+                            "WhiteTailedDeer",   "#558B2F",
                             "#9E9E9E"
                         ],
                         "line-opacity": 0.7
                     },
-                    "tooltip_fields": ["species", "herdid", "season", "year"]
+                    "tooltip_fields": ["species", "herd", "state", "ind_year"]
                 }
             ]
         },
@@ -211,13 +211,14 @@
             ]
         },
         {
-            "collection_id": "wyoming-wy-counties",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wy-counties/stac-collection.json",
+            "collection_id": "census-2024-county",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/county/stac-collection.json",
             "assets": [
                 {
-                    "id": "wy-counties-pmtiles",
+                    "id": "county-pmtiles",
                     "display_name": "Wyoming Counties",
                     "group": "Land Management",
+                    "default_filter": ["==", ["get", "STATEFP"], "56"],
                     "default_style": {
                         "fill-color": "rgba(0,0,0,0)",
                         "fill-opacity": 0
@@ -226,25 +227,28 @@
                         "line-color": "rgba(0,0,0,0.7)",
                         "line-width": 2
                     },
-                    "tooltip_fields": ["COUNTYNAME"]
+                    "tooltip_fields": ["NAME"]
                 }
             ]
         },
         {
-            "collection_id": "wyoming-wyoming-places",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/wyoming-places/stac-collection.json",
+            "collection_id": "census-2024-place",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/place/stac-collection.json",
             "assets": [
                 {
-                    "id": "wyoming-places-pmtiles",
-                    "display_name": "Wyoming Incorporated Places",
+                    "id": "place-pmtiles",
+                    "display_name": "Wyoming Places",
                     "group": "Land Management",
-                    "layer_type": "circle",
+                    "default_filter": ["==", ["get", "STATEFP"], "56"],
                     "default_style": {
-                        "circle-color": "#9C27B0",
-                        "circle-radius": 6,
-                        "circle-opacity": 0.85
+                        "fill-color": "#9C27B0",
+                        "fill-opacity": 0.15
                     },
-                    "tooltip_fields": ["Name", "County", "Population_2010", "County_Seat"]
+                    "outline_style": {
+                        "line-color": "#9C27B0",
+                        "line-width": 1.5
+                    },
+                    "tooltip_fields": ["NAMELSAD"]
                 }
             ]
         },
