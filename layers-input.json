@@ -199,11 +199,11 @@
             ]
         },
         {
-            "collection_id": "wyoming-blm-sma",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wyoming/blm-sma/stac-collection.json",
+            "collection_id": "blm-surface-management-agency",
+            "collection_url": "https://s3-west.nrp-nautilus.io/public-blm/surface-management-agency/stac-collection.json",
             "assets": [
                 {
-                    "id": "blm-sma-pmtiles",
+                    "id": "surface-management-agency-pmtiles",
                     "display_name": "BLM Surface Management Areas",
                     "group": "Land Management",
                     "default_filter": ["!=", ["get", "ADMIN_AGENCY_CODE"], "PVT"],
