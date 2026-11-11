@@ -127,7 +127,6 @@
                     "display_name": "Elk Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "default_style": { "fill-color": "#E65100", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
                 }
             ]
@@ -141,7 +140,6 @@
                     "display_name": "Mule Deer Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "default_style": { "fill-color": "#2E7D32", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
                 }
             ]
@@ -155,7 +153,6 @@
                     "display_name": "Pronghorn Crucial Range",
                     "group": "Wildlife Habitat",
                     "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "default_style": { "fill-color": "#1565C0", "fill-opacity": 0.5 },
                     "tooltip_fields": ["RANGE", "Acres"]
                 }
             ]
@@ -168,7 +165,6 @@
                     "id": "sage-grouse-priority-pmtiles",
                     "display_name": "Sage-Grouse Core Areas",
                     "group": "Wildlife Habitat",
-                    "default_style": { "fill-color": "#6A1B9A", "fill-opacity": 0.4 },
                     "tooltip_fields": ["NAME", "Acres"]
                 }
             ]
@@ -183,17 +179,6 @@
                     "group": "Wildlife Habitat",
                     "visible": true,
                     "layer_type": "line",
-                    "default_style": {
-                        "line-color": ["match", ["get", "species"],
-                            "Elk",               "#E65100",
-                            "MuleDeer",          "#2E7D32",
-                            "Pronghorn",         "#1565C0",
-                            "Moose",             "#6D4C41",
-                            "WhiteTailedDeer",   "#558B2F",
-                            "#9E9E9E"
-                        ],
-                        "line-opacity": 0.7
-                    },
                     "tooltip_fields": ["species", "herd", "state", "ind_year"]
                 }
             ]
@@ -207,19 +192,6 @@
                     "display_name": "BLM Surface Management Areas",
                     "group": "Land Management",
                     "default_filter": ["!=", ["get", "ADMIN_AGENCY_CODE"], "PVT"],
-                    "default_style": {
-                        "fill-color": ["match", ["get", "ADMIN_AGENCY_CODE"],
-                            "BLM",  "#D4A017",
-                            "USFS", "#2D7D32",
-                            "NPS",  "#4E7D5A",
-                            "FWS",  "#1565C0",
-                            "USBR", "#6A1B9A",
-                            "DOD",  "#B71C1C",
-                            "ST",   "#546E7A",
-                            "#9E9E9E"
-                        ],
-                        "fill-opacity": 0.4
-                    },
                     "tooltip_fields": ["ADMIN_AGENCY_CODE", "ADMIN_UNIT_NAME", "ADMIN_UNIT_TYPE"]
                 }
             ]
@@ -233,14 +205,6 @@
                     "display_name": "Wyoming Counties",
                     "group": "Land Management",
                     "default_filter": ["==", ["get", "STATEFP"], "56"],
-                    "default_style": {
-                        "fill-color": "rgba(0,0,0,0)",
-                        "fill-opacity": 0
-                    },
-                    "outline_style": {
-                        "line-color": "rgba(0,0,0,0.7)",
-                        "line-width": 2
-                    },
                     "tooltip_fields": ["NAME"]
                 }
             ]
@@ -254,14 +218,6 @@
                     "display_name": "Wyoming Places",
                     "group": "Land Management",
                     "default_filter": ["==", ["get", "STATEFP"], "56"],
-                    "default_style": {
-                        "fill-color": "#9C27B0",
-                        "fill-opacity": 0.15
-                    },
-                    "outline_style": {
-                        "line-color": "#9C27B0",
-                        "line-width": 1.5
-                    },
                     "tooltip_fields": ["NAMELSAD"]
                 }
             ]
@@ -294,22 +250,6 @@
                     "display_name": "Protected Areas",
                     "group": "Land Ownership",
                     "default_filter": ["match", ["get", "GAP_Sts"], ["1", "2"], true, false],
-                    "default_style": {
-                        "fill-color": ["match", ["get", "Mang_Name"],
-                            "BLM",  "#D4A017",
-                            "USFS", "#2D7D32",
-                            "NPS",  "#4E7D5A",
-                            "FWS",  "#1565C0",
-                            "USBR", "#6A1B9A",
-                            "DOD",  "#B71C1C",
-                            "SLB",  "#E67E22",
-                            "NGO",  "#AD1457",
-                            "TRIB", "#E65100",
-                            "#888888"
-                        ],
-                        "fill-opacity": 0.5,
-                        "fill-outline-color": "rgba(0,0,0,0.15)"
-                    },
                     "tooltip_fields": ["Unit_Nm", "Mang_Name", "GAP_Sts", "GIS_Acres"]
                 }
             ]
