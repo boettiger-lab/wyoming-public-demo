@@ -1,248 +1,379 @@
 {
-    "sidebar": {
-        "enabled": true,
-        "chat_title": "Chat"
-    },
-    "catalog": "https://s3-west.nrp-nautilus.io/public-data/stac/catalog.json",
-    "titiler_url": "https://titiler.nrp-nautilus.io",
-    "mcp_url": "https://duckdb-mcp.nrp-nautilus.io/mcp",
-    "draw_enabled": true,
-    "export": true,
-    "header": {
-        "title": "Public GYE Explorer",
-        "partner": {
-            "src": "https://cdn.jsdelivr.net/gh/boettiger-lab/wyoming-public-demo@9e977f5e076a41209a8fa6cbdbb56df4e64cad2b/assets/beyond-yellowstone-living-lab-white.png",
-            "alt": "Beyond Yellowstone Living Lab",
-            "href": "https://www.beyondyellowstone.org/"
-        }
-    },
-    "theme": {
-        "mode": "dark",
-        "surface": "#0f2213",
-        "text": "#f2f6f7",
-        "primary": "#2c7a38",
-        "backdrop": "#0a170d"
-    },
-    "view": {
-        "center": [-107.5, 43.0],
-        "zoom": 7
-    },
-    "_llm_note": "Uncomment the llm block below for GitHub Pages / static hosting (no server secrets). For Kubernetes, delete it — the k8s/ manifests inject config.json with API keys at deploy time.",
-    "llm": {
-        "user_provided": true,
-        "default_endpoint": "https://openrouter.ai/api/v1",
-        "models": [
-            { "value": "qwen/qwen3-235b-a22b", "label": "Qwen3 235B" },
-            { "value": "moonshotai/kimi-k2", "label": "Kimi K2" },
-            { "value": "minimax/minimax-m1", "label": "MiniMax M1" },
-            { "value": "anthropic/claude-sonnet-5", "label": "Claude Sonnet 5" },
-            { "value": "google/gemini-2.5-flash", "label": "Gemini Flash" }
-        ]
-    },
-    "welcome": {
-        "message": "Explore Wyoming wildlife habitat and public lands. Ask me to show layers, filter by species or agency, or run quick calculations.",
-        "examples": [
-            "Show sage-grouse core areas and sagebrush cover",
-            "Show only National Forest and BLM lands, color them green and gold",
-            "Show sagebrush cover and invasive annual grass layers",
-            "Show sage-grouse core areas and filter protected areas to GAP status 1 and 2",
-            "How many acres of crucial elk winter range are there in Wyoming?",
-            "Which counties have the most pronghorn habitat?"
-        ]
-    },
-    "collections": [
-        {
-            "collection_id": "nlcd",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/stac-collection.json",
-            "assets": [
-                {
-                    "id": "nlcd-cog-2024",
-                    "display_name": "NLCD 2024 Land Cover",
-                    "group": "Land Cover",
-                    "paint": {"raster-opacity": 0.5}
-                }
-            ]
-        },
-        {
-            "collection_id": "usgs-sagebrush-conservation-design",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-usgs-sagebrush/sagebrush-conservation-design/stac-collection.json",
-            "assets": [
-                {
-                    "id": "sagebrush-conservation-design-2017-2020-cog",
-                    "display_name": "Sagebrush Conservation Design (2017–2020)",
-                    "group": "Land Cover"
-                }
-            ]
-        },
-        {
-            "collection_id": "rap-arte",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-arte/stac-collection.json",
-            "assets": [
-                {
-                    "id": "rap-arte-cog",
-                    "display_name": "Sagebrush Cover (RAP)",
-                    "group": "Land Cover",
-                    "legend_label": "% cover"
-                }
-            ]
-        },
-        {
-            "collection_id": "rap-iag",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-iag/stac-collection.json",
-            "assets": [
-                {
-                    "id": "rap-iag-cog",
-                    "display_name": "Invasive Annual Grass (RAP)",
-                    "group": "Land Cover",
-                    "legend_label": "% cover"
-                }
-            ]
-        },
-        {
-            "collection_id": "rap-afg-cover",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-afg-cover/stac-collection.json",
-            "assets": [
-                {
-                    "id": "rap-afg-cover-cog",
-                    "display_name": "Annual Forb & Grass Cover (RAP)",
-                    "group": "Land Cover",
-                    "legend_label": "% cover"
-                }
-            ]
-        },
-        {
-            "collection_id": "wgfd-elk-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/elk-seasonal/stac-collection.json",
-            "assets": [
-                {
-                    "id": "elk-seasonal-pmtiles",
-                    "display_name": "Elk Crucial Range",
-                    "group": "Wildlife Habitat",
-                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "tooltip_fields": ["RANGE", "Acres"]
-                }
-            ]
-        },
-        {
-            "collection_id": "wgfd-mule-deer-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/mule-deer-seasonal/stac-collection.json",
-            "assets": [
-                {
-                    "id": "mule-deer-seasonal-pmtiles",
-                    "display_name": "Mule Deer Crucial Range",
-                    "group": "Wildlife Habitat",
-                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "tooltip_fields": ["RANGE", "Acres"]
-                }
-            ]
-        },
-        {
-            "collection_id": "wgfd-pronghorn-seasonal",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/pronghorn-seasonal/stac-collection.json",
-            "assets": [
-                {
-                    "id": "pronghorn-seasonal-pmtiles",
-                    "display_name": "Pronghorn Crucial Range",
-                    "group": "Wildlife Habitat",
-                    "default_filter": ["match", ["get", "RANGE"], ["CRUWYL", "CRUWIN", "CRUSWR"], true, false],
-                    "tooltip_fields": ["RANGE", "Acres"]
-                }
-            ]
-        },
-        {
-            "collection_id": "wgfd-sage-grouse-priority",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/sage-grouse-priority/stac-collection.json",
-            "assets": [
-                {
-                    "id": "sage-grouse-priority-pmtiles",
-                    "display_name": "Sage-Grouse Core Areas",
-                    "group": "Wildlife Habitat",
-                    "tooltip_fields": ["NAME", "Acres"]
-                }
-            ]
-        },
-        {
-            "collection_id": "usgs-ungulate-migration-routes",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-usgs-ungulate-migration/ungulate-routes/stac-collection.json",
-            "assets": [
-                {
-                    "id": "ungulate-routes-pmtiles",
-                    "display_name": "Ungulate Migration Routes",
-                    "group": "Wildlife Habitat",
-                    "visible": true,
-                    "layer_type": "line",
-                    "tooltip_fields": ["species", "herd", "state", "ind_year"]
-                }
-            ]
-        },
-        {
-            "collection_id": "blm-surface-management-agency",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-blm/surface-management-agency/stac-collection.json",
-            "assets": [
-                {
-                    "id": "surface-management-agency-pmtiles",
-                    "display_name": "BLM Surface Management Areas",
-                    "group": "Land Management",
-                    "default_filter": ["!=", ["get", "ADMIN_AGENCY_CODE"], "PVT"],
-                    "tooltip_fields": ["ADMIN_AGENCY_CODE", "ADMIN_UNIT_NAME", "ADMIN_UNIT_TYPE"]
-                }
-            ]
-        },
-        {
-            "collection_id": "census-2024-county",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/county/stac-collection.json",
-            "assets": [
-                {
-                    "id": "county-pmtiles",
-                    "display_name": "Wyoming Counties",
-                    "group": "Land Management",
-                    "default_filter": ["==", ["get", "STATEFP"], "56"],
-                    "tooltip_fields": ["NAME"]
-                }
-            ]
-        },
-        {
-            "collection_id": "census-2024-place",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/place/stac-collection.json",
-            "assets": [
-                {
-                    "id": "place-pmtiles",
-                    "display_name": "Wyoming Places",
-                    "group": "Land Management",
-                    "default_filter": ["==", ["get", "STATEFP"], "56"],
-                    "tooltip_fields": ["NAMELSAD"]
-                }
-            ]
-        },
-        {
-            "collection_id": "rap-pfg-cover",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-pfg-cover/stac-collection.json",
-            "assets": [
-                {
-                    "id": "rap-pfg-cover-cog",
-                    "display_name": "Perennial Forb & Grass Cover (RAP)",
-                    "group": "Land Cover",
-                    "legend_label": "% cover"
-                }
-            ]
-        },
-        {
-            "collection_id": "gbif-derived",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-gbif/stac-collection.json",
-            "assets": []
-        },
-        {
-            "collection_id": "pad-us-4.1-combined",
-            "collection_url": "https://s3-west.nrp-nautilus.io/public-padus/padus-4-1/combined/stac-collection.json",
-            "assets": [
-                {
-                    "id": "combined-pmtiles",
-                    "display_name": "Protected Areas",
-                    "group": "Land Ownership",
-                    "default_filter": ["match", ["get", "GAP_Sts"], ["1", "2"], true, false],
-                    "tooltip_fields": ["Unit_Nm", "Mang_Name", "GAP_Sts", "GIS_Acres"]
-                }
-            ]
-        }
+  "sidebar": {
+    "enabled": true,
+    "chat_title": "Chat"
+  },
+  "catalog": "https://s3-west.nrp-nautilus.io/public-data/stac/catalog.json",
+  "titiler_url": "https://titiler.nrp-nautilus.io",
+  "export": true,
+  "header": {
+    "title": "Public GYE Explorer",
+    "partner": {
+      "src": "https://cdn.jsdelivr.net/gh/boettiger-lab/wyoming-public-demo@9e977f5e076a41209a8fa6cbdbb56df4e64cad2b/assets/beyond-yellowstone-living-lab-white.png",
+      "alt": "Beyond Yellowstone Living Lab",
+      "href": "https://www.beyondyellowstone.org/"
+    }
+  },
+  "theme": {
+    "mode": "dark",
+    "surface": "#0f2213",
+    "text": "#f2f6f7",
+    "primary": "#2c7a38",
+    "backdrop": "#0a170d"
+  },
+  "view": {
+    "center": [
+      -107.5,
+      43
+    ],
+    "zoom": 7
+  },
+  "_llm_note": "Uncomment the llm block below for GitHub Pages / static hosting (no server secrets). For Kubernetes, delete it — the k8s/ manifests inject config.json with API keys at deploy time.",
+  "llm": {
+    "user_provided": true,
+    "default_endpoint": "https://openrouter.ai/api/v1",
+    "models": [
+      {
+        "value": "qwen/qwen3-235b-a22b",
+        "label": "Qwen3 235B"
+      },
+      {
+        "value": "moonshotai/kimi-k2",
+        "label": "Kimi K2"
+      },
+      {
+        "value": "minimax/minimax-m1",
+        "label": "MiniMax M1"
+      },
+      {
+        "value": "anthropic/claude-sonnet-5",
+        "label": "Claude Sonnet 5"
+      },
+      {
+        "value": "google/gemini-2.5-flash",
+        "label": "Gemini Flash"
+      }
     ]
+  },
+  "welcome": {
+    "message": "Explore Wyoming wildlife habitat and public lands. Ask me to show layers, filter by species or agency, or run quick calculations.",
+    "examples": [
+      "Show sage-grouse core areas and sagebrush cover",
+      "Show only National Forest and BLM lands, color them green and gold",
+      "Show sagebrush cover and invasive annual grass layers",
+      "Show sage-grouse core areas and filter protected areas to GAP status 1 and 2",
+      "How many acres of crucial elk winter range are there in Wyoming?",
+      "Which counties have the most pronghorn habitat?"
+    ]
+  },
+  "collections": [
+    {
+      "collection_id": "nlcd",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-land-cover/nlcd/stac-collection.json",
+      "assets": [
+        {
+          "id": "nlcd-cog-2024",
+          "display_name": "NLCD 2024 Land Cover",
+          "group": "Land Cover",
+          "paint": {
+            "raster-opacity": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "collection_id": "usgs-sagebrush-conservation-design",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-usgs-sagebrush/sagebrush-conservation-design/stac-collection.json",
+      "assets": [
+        {
+          "id": "sagebrush-conservation-design-2017-2020-cog",
+          "display_name": "Sagebrush Conservation Design (2017–2020)",
+          "group": "Land Cover"
+        }
+      ]
+    },
+    {
+      "collection_id": "rap-arte",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-arte/stac-collection.json",
+      "assets": [
+        {
+          "id": "rap-arte-cog",
+          "display_name": "Sagebrush Cover (RAP)",
+          "group": "Land Cover",
+          "legend_label": "% cover"
+        }
+      ]
+    },
+    {
+      "collection_id": "rap-iag",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-iag/stac-collection.json",
+      "assets": [
+        {
+          "id": "rap-iag-cog",
+          "display_name": "Invasive Annual Grass (RAP)",
+          "group": "Land Cover",
+          "legend_label": "% cover"
+        }
+      ]
+    },
+    {
+      "collection_id": "rap-afg-cover",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-afg-cover/stac-collection.json",
+      "assets": [
+        {
+          "id": "rap-afg-cover-cog",
+          "display_name": "Annual Forb & Grass Cover (RAP)",
+          "group": "Land Cover",
+          "legend_label": "% cover"
+        }
+      ]
+    },
+    {
+      "collection_id": "wgfd-elk-seasonal",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/elk-seasonal/stac-collection.json",
+      "assets": [
+        {
+          "id": "elk-seasonal-pmtiles",
+          "display_name": "Elk Crucial Range",
+          "group": "Wildlife Habitat",
+          "default_filter": [
+            "match",
+            [
+              "get",
+              "RANGE"
+            ],
+            [
+              "CRUWYL",
+              "CRUWIN",
+              "CRUSWR"
+            ],
+            true,
+            false
+          ],
+          "tooltip_fields": [
+            "RANGE",
+            "Acres"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "wgfd-mule-deer-seasonal",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/mule-deer-seasonal/stac-collection.json",
+      "assets": [
+        {
+          "id": "mule-deer-seasonal-pmtiles",
+          "display_name": "Mule Deer Crucial Range",
+          "group": "Wildlife Habitat",
+          "default_filter": [
+            "match",
+            [
+              "get",
+              "RANGE"
+            ],
+            [
+              "CRUWYL",
+              "CRUWIN",
+              "CRUSWR"
+            ],
+            true,
+            false
+          ],
+          "tooltip_fields": [
+            "RANGE",
+            "Acres"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "wgfd-pronghorn-seasonal",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/pronghorn-seasonal/stac-collection.json",
+      "assets": [
+        {
+          "id": "pronghorn-seasonal-pmtiles",
+          "display_name": "Pronghorn Crucial Range",
+          "group": "Wildlife Habitat",
+          "default_filter": [
+            "match",
+            [
+              "get",
+              "RANGE"
+            ],
+            [
+              "CRUWYL",
+              "CRUWIN",
+              "CRUSWR"
+            ],
+            true,
+            false
+          ],
+          "tooltip_fields": [
+            "RANGE",
+            "Acres"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "wgfd-sage-grouse-priority",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-wgfd/sage-grouse-priority/stac-collection.json",
+      "assets": [
+        {
+          "id": "sage-grouse-priority-pmtiles",
+          "display_name": "Sage-Grouse Core Areas",
+          "group": "Wildlife Habitat",
+          "tooltip_fields": [
+            "NAME",
+            "Acres"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "usgs-ungulate-migration-routes",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-usgs-ungulate-migration/ungulate-routes/stac-collection.json",
+      "assets": [
+        {
+          "id": "ungulate-routes-pmtiles",
+          "display_name": "Ungulate Migration Routes",
+          "group": "Wildlife Habitat",
+          "visible": true,
+          "layer_type": "line",
+          "tooltip_fields": [
+            "species",
+            "herd",
+            "state",
+            "ind_year"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "blm-surface-management-agency",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-blm/surface-management-agency/stac-collection.json",
+      "assets": [
+        {
+          "id": "surface-management-agency-pmtiles",
+          "display_name": "BLM Surface Management Areas",
+          "group": "Land Management",
+          "default_filter": [
+            "!=",
+            [
+              "get",
+              "ADMIN_AGENCY_CODE"
+            ],
+            "PVT"
+          ],
+          "tooltip_fields": [
+            "ADMIN_AGENCY_CODE",
+            "ADMIN_UNIT_NAME",
+            "ADMIN_UNIT_TYPE"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "census-2024-county",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/county/stac-collection.json",
+      "assets": [
+        {
+          "id": "county-pmtiles",
+          "display_name": "Wyoming Counties",
+          "group": "Land Management",
+          "default_filter": [
+            "==",
+            [
+              "get",
+              "STATEFP"
+            ],
+            "56"
+          ],
+          "tooltip_fields": [
+            "NAME"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "census-2024-place",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-census/census-2024/place/stac-collection.json",
+      "assets": [
+        {
+          "id": "place-pmtiles",
+          "display_name": "Wyoming Places",
+          "group": "Land Management",
+          "default_filter": [
+            "==",
+            [
+              "get",
+              "STATEFP"
+            ],
+            "56"
+          ],
+          "tooltip_fields": [
+            "NAMELSAD"
+          ]
+        }
+      ]
+    },
+    {
+      "collection_id": "rap-pfg-cover",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-rap/rap-pfg-cover/stac-collection.json",
+      "assets": [
+        {
+          "id": "rap-pfg-cover-cog",
+          "display_name": "Perennial Forb & Grass Cover (RAP)",
+          "group": "Land Cover",
+          "legend_label": "% cover"
+        }
+      ]
+    },
+    {
+      "collection_id": "gbif-derived",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-gbif/stac-collection.json",
+      "assets": []
+    },
+    {
+      "collection_id": "pad-us-4.1-combined",
+      "collection_url": "https://s3-west.nrp-nautilus.io/public-padus/padus-4-1/combined/stac-collection.json",
+      "assets": [
+        {
+          "id": "combined-pmtiles",
+          "display_name": "Protected Areas",
+          "group": "Land Ownership",
+          "default_filter": [
+            "match",
+            [
+              "get",
+              "GAP_Sts"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            true,
+            false
+          ],
+          "tooltip_fields": [
+            "Unit_Nm",
+            "Mang_Name",
+            "GAP_Sts",
+            "GIS_Acres"
+          ]
+        }
+      ]
+    }
+  ],
+  "plugins": [
+    {
+      "url": "https://cdn.jsdelivr.net/gh/SchmidtDSE/glen@v4.0.0/core/plugins/mcp.js",
+      "options": {
+        "url": "https://duckdb-mcp.nrp-nautilus.io/mcp",
+        "prompt": "geospatial-analyst"
+      }
+    },
+    "https://cdn.jsdelivr.net/gh/SchmidtDSE/glen@v4.0.0/core/plugins/hex.js",
+    "https://cdn.jsdelivr.net/gh/SchmidtDSE/glen@v4.0.0/core/plugins/draw.js"
+  ]
 }
